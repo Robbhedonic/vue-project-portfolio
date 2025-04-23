@@ -34,6 +34,7 @@ export default defineConfig({
     strictPort: true
   },
   optimizeDeps: {
-    include: ['vue', 'vuetify', '@mdi/font', 'webfontloader']
+    include: ['vue', 'vuetify', 'webfontloader'],
+    exclude: ['@mdi/font']
   }
 })
