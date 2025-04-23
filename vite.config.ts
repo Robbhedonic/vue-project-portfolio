@@ -32,5 +32,8 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true
+  },
+  optimizeDeps: {
+    include: ['vue', 'vuetify', '@mdi/font', 'webfontloader']
   }
 })
