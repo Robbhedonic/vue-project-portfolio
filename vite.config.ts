@@ -6,6 +6,6 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vue-projects/',
+  base: process.env.NODE_ENV === 'production' ? '/vue-project/' : '/',
   plugins: [vue(), vuetify({ autoImport: true })],
 })
