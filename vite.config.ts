@@ -18,6 +18,9 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url))
+      },
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
