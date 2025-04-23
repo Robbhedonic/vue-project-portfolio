@@ -17,6 +17,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url))
@@ -27,5 +28,9 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js'
       }
     }
+  },
+  server: {
+    port: 5173,
+    strictPort: true
   }
 })
